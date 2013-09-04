@@ -1,0 +1,69 @@
+ <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&amp;libraries=weather"></script>
+<script type="text/javascript" src="js/jtwitter.js"></script>
+<div data-role="page" id="mainPage">
+    <div data-role="header"> <a data-rel="back" data-icon="home">Home</a>
+
+         <h1> CS5590VC Lab 2</h1>
+
+    </div>
+    <div data-role="content">
+        <p><a href="#GetDirectionsPage" data-role="button"> Google Maps Service - Directions and weather</a>
+
+        </p> 
+
+    </div>
+</div>
+<div data-role="page" id="GetDirectionsPage">
+    <div data-role="header"> <a data-rel="back" data-icon="home">Home</a>
+
+         <h1> CS5590VC Lab 2 </h1>
+
+    </div>
+    <div id="panel">
+    <b>Start: </b>
+    <select id="start"onchange="calcRoute();">
+      <option value="chicago, il">Chicago</option>
+      <option value="st louis, mo">St Louis</option>
+      <option value="joplin, mo">Joplin, MO</option>
+      <option value="oklahoma city, ok">Oklahoma City</option>
+      <option value="amarillo, tx">Amarillo</option>
+      <option value="gallup, nm">Gallup, NM</option>
+      <option value="flagstaff, az">Flagstaff, AZ</option>
+      <option value="winona, az">Winona</option>
+      <option value="kingman, az">Kingman</option>
+      <option value="barstow, ca">Barstow</option>
+      <option value="san bernardino, ca">San Bernardino</option>
+      <option value="los angeles, ca">Los Angeles</option>
+    </select>
+    <b>End: </b>
+    <select id="end" >
+     
+      <option value="st louis, mo">St Louis</option>
+         <option value="chicago, il">Chicago</option>
+      <option value="joplin, mo">Joplin, MO</option>
+      <option value="oklahoma city, ok">Oklahoma City</option>
+      <option value="amarillo, tx">Amarillo</option>
+      <option value="gallup, nm">Gallup, NM</option>
+      <option value="flagstaff, az">Flagstaff, AZ</option>
+      <option value="winona, az">Winona</option>
+      <option value="kingman, az">Kingman</option>
+      <option value="barstow, ca">Barstow</option>
+      <option value="san bernardino, ca">San Bernardino</option>
+      <option value="los angeles, ca">Los Angeles</option>
+    </select>
+            <b>Transportation Mode: </b>
+    <select id="mode" >
+     
+      <option value="DRIVING">Driving</option>
+         <option value="WALKING">Walking</option>
+      <option value="BICYCLING">Bicycling</option>
+        </select>
+        </div>
+    
+    <div data-role="content" id="map_canvas"></div>
+    
+    <div id="results" style="display:none;">
+                    <div id="directions"></div>
+        
+                </div>
+</div>
